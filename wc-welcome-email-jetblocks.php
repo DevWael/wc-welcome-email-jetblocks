@@ -14,7 +14,7 @@
   * if the woocommerce is active, go and trigger the welcome email using the given user id
   */
 add_action( 'user_register', function( $user_id ) {
-    if ( isset( $_POST['jet-register-nonce'] ) && class_exists( 'WC' ) ) {        
+    if ( isset( $_POST['jet-register-nonce'] ) && class_exists( 'woocommerce' ) ) {        
         $mailer = WC()->mailer();
         $mails = $mailer->get_emails();
 
